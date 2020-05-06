@@ -6,18 +6,13 @@ import galaxy from '../assets/images/galaxy.jpg';
 import iss from '../assets/images/iss.jpg';
 import moon from '../assets/images/moon.jpg';
 import { unit } from '../styles';
-import * as LaunchTileTypes from '../pages/__generated__/LaunchTile';
 
 const backgrounds = [galaxy, iss, moon];
 export function getBackgroundImage(id: string) {
   return `url(${backgrounds[Number(id) % backgrounds.length]})`;
 }
 
-interface LaunchTileProps {
-  launch: LaunchTileTypes.LaunchTile;
-}
-
-const LaunchTile: React.FC<LaunchTileProps> = ({ launch }) => {
+export default ({ launch }: any) => {
   const { id, mission, rocket } = launch;
   return (
     <StyledLink
@@ -26,13 +21,11 @@ const LaunchTile: React.FC<LaunchTileProps> = ({ launch }) => {
         backgroundImage: getBackgroundImage(id),
       }}
     >
-      <h3>{mission ? mission.name : ''}</h3>
-      <h5>{rocket && rocket.name}</h5>
+      <h3>{mission.name}</h3>
+      <h5>{rocket.name}</h5>
     </StyledLink>
   );
-}
-
-export default LaunchTile;
+};
 
 /**
  * STYLED COMPONENTS USED IN THIS FILE ARE BELOW HERE

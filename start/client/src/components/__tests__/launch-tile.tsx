@@ -11,11 +11,9 @@ describe('Launch Tile', () => {
     render(
       <LaunchTile
         launch={{
-          __typename: 'Launch',
-          isBooked: false,
-          id: '1',
-          mission: { name: 'the first one', __typename: 'Mission', missionPatch: null },
-          rocket: { name: 'harambe', __typename: 'Rocket', id: '1' },
+          id: 1,
+          mission: { name: 'the first one' },
+          rocket: { name: 'harambe' },
         }}
       />,
     );

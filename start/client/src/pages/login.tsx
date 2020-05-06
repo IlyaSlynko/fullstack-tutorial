@@ -7,11 +7,10 @@ import ApolloClient from 'apollo-client';
 import * as LoginTypes from './__generated__/login';
 
 export const LOGIN_USER = gql`
-  mutation Login($email: String!) {
+  mutation login($email: String!) {
     login(email: $email)
   }
 `;
-
 export default function Login() {
   const client: ApolloClient<any> = useApolloClient();
   const [login, { loading, error }] = useMutation<LoginTypes.login, LoginTypes.loginVariables>(
