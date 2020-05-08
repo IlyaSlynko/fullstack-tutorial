@@ -1,4 +1,11 @@
+#Деплой
+Сервер
+https://la9.herokuapp.com
+Клиент
+https://client-gold-alpha.now.sh/profile
+
 # Apollo tutorial
+
 
 This is the fullstack app for the [Apollo tutorial](http://apollographql.com/docs/tutorial/introduction.html). 🚀
 
@@ -23,3 +30,5 @@ and
 ```bash
 cd final/client && npm i && npm start
 ```
+
+
