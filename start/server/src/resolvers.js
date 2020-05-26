@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 const { paginateResults } = require("./utils");
 
 module.exports = {
@@ -110,4 +108,3 @@ module.exports = {
     },
   },
 };
->>>>>>> Stashed changes
